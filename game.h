@@ -1,5 +1,8 @@
 #pragma once
 #include "olcPixelGameEngine.h"
+#include "player.h"
+
+#include <vector>
 
 
 class game : public olc::PixelGameEngine
@@ -14,6 +17,12 @@ public:
 public:
 	void Draw();
 
+public:
+	void getInput();
+
+private:
+	std::vector<entity> enemyEntity; // enemy entity class
+	player player; // enemy entity
 
 private:
     bool bplayApp;

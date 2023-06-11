@@ -1,8 +1,11 @@
 #include "game.h"
+#include "player.h"
 
 
 bool game::OnUserCreate()
 {
+    player.set_posY(5.2f);
+    player.set_posX(10.0f);
     bplayApp = true;
     return true;
 }
