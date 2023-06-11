@@ -10,7 +10,8 @@ public:
     float fvxInp = 0,
     float fvyInp = 0,
     float axInp = 0,
-    float ayInp = 0);
+    float ayInp = 0,
+    float normVel = 0);
     // basic setters
     void set_posX(float inp);
     void set_posY(float inp);
@@ -25,16 +26,21 @@ public:
     float get_velY();
     float get_accelX();
     float get_accelY();
+    float get_normVel();
+
 
 public:
-    void update();
-
+    virtual void update();
+    void normalize_Vel();
 
 private:
     float fposx;
     float fposy;
+
     float fvx;
     float fvy;
+    float normVel; // this should be set by the derived classes.
+
     float ax;
     float ay;    
 };

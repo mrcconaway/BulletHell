@@ -3,7 +3,7 @@ CFLAGS = -luser32 -lgdi32 -lopengl32 -lgdiplus -lShlwapi -ldwmapi -lstdc++fs -st
 LFLAGS = -lX11 -lGL -lpthread -lpng -lstdc++fs -std=c++17
 
 win: build
-	g++ -o Bullethell.exe olcPixelGameEngine.o main.o game.o player.o entity.o  $(CFLAGS)
+	g++ -o Bullethell.exe -g olcPixelGameEngine.o main.o game.o player.o entity.o  $(CFLAGS)
 	./Bullethell.exe
 
 olcPixelGameEngine.o: olcPixelGameEngine.h olcPixelGameEngine.cpp 

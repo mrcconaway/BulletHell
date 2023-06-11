@@ -22,7 +22,7 @@ public:
 
 private:
 	std::vector<entity> enemyEntity; // enemy entity class
-	player player; // enemy entity
+	player* player; // enemy entity
 
 private:
     bool bplayApp;
