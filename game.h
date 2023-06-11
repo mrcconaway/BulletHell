@@ -16,14 +16,18 @@ public:
 	bool OnUserUpdate(float fElapsedTime) override;
 public:
 	void Draw();
+	void DrawPlayer();
 
 public:
 	void getInput();
+	void update();
 
 private:
 	std::vector<entity> enemyEntity; // enemy entity class
-	player* player; // enemy entity
+	player player; // enemy entity
 
 private:
     bool bplayApp;
+	float prevframetime;
+	float currframetime;
 };
