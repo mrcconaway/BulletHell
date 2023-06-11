@@ -17,6 +17,7 @@ public:
 public:
 	void Draw();
 	void DrawPlayer();
+	void drawCrosshair();
 
 public:
 	void getInput();
@@ -27,7 +28,10 @@ private:
 	player player; // enemy entity
 
 private:
+float SWR = ScreenWidth() / 256.0f; // Screen Width Ratio
+private:
     bool bplayApp;
 	float prevframetime;
 	float currframetime;
+
 };

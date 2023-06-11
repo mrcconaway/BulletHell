@@ -19,6 +19,7 @@ bool game::OnUserUpdate(float fElapsedTime)
     update();
     Draw();
     DrawPlayer();
+    drawCrosshair();
 
     prevframetime = fElapsedTime;
     return bplayApp;
@@ -89,4 +90,9 @@ void game::DrawPlayer()
 
         } // for loop over iy
     } // for loop over ix
+}
+
+void game::drawCrosshair()
+{
+	DrawCircle(GetMouseX(), GetMouseY(), 3 * SWR, olc::Pixel(0,0,0));
 }
